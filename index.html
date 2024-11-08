@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpg" alt="University Logo">
+        </div>
+        <ul class="navigationLinks">
+            <li><a href="#part1">Home</a></li>
+            <li><a href="#part2">About</a></li>
+            <li><a href="#part3">Programs</a></li>
+            <li><a href="#fee">Calculator</a></li>
+            <li><a href="#contactuspage">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section id="part1">
+        <div class="left">
+            <h1>Welcome to Our University</h1>
+            <p>Shaping Tomorrow's Leaders Today</p>
+        </div>
+        <div class="right">
+            <img src="universityimg2.jpg" alt="Campus View">
+        </div>
+    </section>
+
+    <section id="part2">
+        <h2>About Our Institution</h2>
+        <div class="content">
+            <p>Empowering students with knowledge and skills to excel in a dynamic world. Our institution is committed to fostering innovation, research, and holistic development.</p>
+        </div>
+    </section>
+
+    <!-- Updated Programs Section -->
+    <section id="part3">
+        <h2>Our Programs</h2>
+        <div class="program-container">
+            <div class="program-box">
+                <div class="program-icon">🖥️</div>
+                <h3>Computer Science</h3>
+                <p>4-Year Program</p>
+                <ul>
+                    <li>Artificial Intelligence</li>
+                    <li>Web Development</li>
+                    <li>Data Science</li>
+                </ul>
+                <span class="fee-tag">$8000/semester</span>
+            </div>
+
+            <div class="program-box">
+                <div class="program-icon">💼</div>
+                <h3>Business Administration</h3>
+                <p>3-Year Program</p>
+                <ul>
+                    <li>Marketing</li>
+                    <li>Finance</li>
+                    <li>Management</li>
+                </ul>
+                <span class="fee-tag">$7000/semester</span>
+            </div>
+
+            <div class="program-box">
+                <div class="program-icon">⚙️</div>
+                <h3>Engineering</h3>
+                <p>4-Year Program</p>
+                <ul>
+                    <li>Mechanical</li>
+                    <li>Electrical</li>
+                    <li>Civil</li>
+                </ul>
+                <span class="fee-tag">$8500/semester</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="fee">
+        <h2>Tuition Fee Calculator</h2>
+        <div class="calculator-form">
+            <div class="program-cards">
+                <div class="program-option" data-fee="8000">
+                    <h3>Computer Science</h3>
+                    <p>$8000/semester</p>
+                    <div class="select-indicator"></div>
+                </div>
+                <div class="program-option" data-fee="7000">
+                    <h3>Business Administration</h3>
+                    <p>$7000/semester</p>
+                    <div class="select-indicator"></div>
+                </div>
+                <div class="program-option" data-fee="8500">
+                    <h3>Engineering</h3>
+                    <p>$8500/semester</p>
+                    <div class="select-indicator"></div>
+                </div>
+            </div>
+            
+            <div class="semester-slider">
+                <h3>Number of Semesters</h3>
+                <input type="range" id="semester-count" min="1" max="8" value="1">
+                <div class="semester-value">1 Semester</div>
+            </div>
+            
+            <div id="fee-result">
+                <div class="fee-summary">
+                    <h3>Estimated Total Fee:</h3>
+                    <div class="total-amount">Select a program</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contact-form" onsubmit="sendEmail(event)">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
